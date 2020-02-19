@@ -1,0 +1,33 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.login{
+	width: 450px;
+	display: block;
+	margin: 100px auto 0px;
+	border: 1px solid black;
+	padding: 50px;
+}
+.login label{
+	display: block;
+	margin-top: 5px;
+}
+.login input{
+	display: block;
+	width: 100%;
+	padding: 7px;
+}
+.login button{
+	display: block;
+	width: 100%;
+	padding: 8px;
+	background-color: blue;
+	color: white;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.login img{
+	width: 100px;
+	display:none;

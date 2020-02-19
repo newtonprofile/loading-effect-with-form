@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form validation 1</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	
+	<div class="login">
+
+		<h1>Sign Up</h1>
+		
+		<img src="assets/img/8e174af8b60742d191dad881bb3143ae.gif" alt="">
+
+		<h3></h3>
+
+		<hr>
+
+		<label for="">Name</label>
+		<input id="name" type="text">
+
+		<label for="">Email</label>
+		<input id="email" type="text">
+
+		<label for="">Cell</label>
+		<input id="cell" type="number">
+
+		<label for="">Password</label>
+		<input  id="pass" type="password">
+
+		<button> Sign Up</button>
+	
+	</div>
+
+	
+
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script>
+		$('.login button').click(function(){
+
+			let name = $('.login input#name').val();
+			let email = $('.login input#email').val();
+			let cell = $('.login input#cell').val();
+			let pass = $('.login input#pass').val();
+
+			$('.login img').show();
+
+			let loading = setInterval(function(){
+
+				$('.login img').hide();
+
+				if( name == '' || email == '' || cell == '' || pass == ''){
+				$('.login h3').html('<span style="color:red;"> File must not be empty ! </span>');
+			}
+			else{
+				$('.login h3').html('<span style="color:blue;"> Submit Done </span>');
+			}
+			let cls = setInterval(function(){
+				$('.login h3').html('');
+				clearInterval(cls);
+			}, 5000);
+
+			clearInterval(loading);
+
+			}, 3000);
+
+		});
+
+	</script>
+</body>
+</html>
